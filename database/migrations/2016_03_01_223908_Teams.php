@@ -22,7 +22,7 @@ class Teams extends Migration
           $teams_table->string('country_code');// http://en.wikipedia.org/wiki/ISO_3166-1#Current_codes
 
           $teams_table->string('team_url');
-          
+
           $teams_table->integer('player_0_account_id');
           $teams_table->integer('player_1_account_id');
           $teams_table->integer('player_2_account_id');
@@ -30,7 +30,7 @@ class Teams extends Migration
           $teams_table->integer('player_4_account_id');
           $teams_table->integer('player_5_account_id');
           $teams_table->integer('player_6_account_id');
-        })
+        });
     }
 
     /**
