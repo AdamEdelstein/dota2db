@@ -38,7 +38,8 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title">Dota2 Database</div>
+                <div>by: Adam Edelstein</div>
             </div>
         </div>
     </body>
