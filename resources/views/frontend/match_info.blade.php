@@ -38,14 +38,8 @@
     <body>
         <div class="container">
             <div class="content">
-              <div class="title">Upper Bracket Teams</div>
-              <div>Team1  Team2  Team3 Team 4</div>
-              <div>Team5  Team6  Team7 Team 8</div>
-
-              <div class="title">Lower Bracket Teams</div>
-              <div>Team1  Team2  Team3 Team 4</div>
-              <div>Team5  Team6  Team7 Team 8</div>
-
+              <div class="title">Match Information</div>
+              <div>Enter your MatchID Below:</div>
             </div>
         </div>
     </body>

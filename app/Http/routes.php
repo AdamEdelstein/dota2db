@@ -18,6 +18,8 @@ Route::get('/', function () {
 
 Route::get('teams', 'teamsController@index')->name('showTeams');
 
+Route::get('match_info', 'matchInfoController@index')->name('showMatches');
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
