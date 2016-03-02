@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('teams', 'teamController@index')->name('showTeams')
+Route::get('teams', 'teamController@index')->name('showTeams');
 /*
 |--------------------------------------------------------------------------
 | Application Routes
