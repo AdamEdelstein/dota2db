@@ -41,13 +41,14 @@
               <div class="title">Match Information</div>
               <div>Enter your MatchID Below:</div>
               <br>
-              {!! Form::open() !!}
+              {!! Form::open(array('url' => '/match_info')); !!}
                 <div>
-                  {!! Form::text('match_id') !!}
+                  {!! Form::text('match_id'); !!}
                   {!! Form::submit('Submit'); !!}
                 </div>
               {!! Form::close() !!}
             </div>
+
         </div>
     </body>
 </html>
