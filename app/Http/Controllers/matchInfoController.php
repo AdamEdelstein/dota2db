@@ -39,11 +39,7 @@ class matchInfoController extends Controller
 
     $match_dump = (json_decode($result, true));
 
-    echo '<p>MatchID : '.$match_dump['result']['match_id'].'</p>';
-    echo '<p>Who Won? (boolean) : '.$match_dump['result']['radiant_win'].'</p>';
-    echo '<p>Start Time : '.$match_dump['result']['start_time'].'</p>';
-    echo '<p>Server Cluster : '.$match_dump['result']['cluster'].'</p>';
-    echo '<p>Game Mode : '.$match_dump['result']['game_mode'].'</p>';
+
 
 
 
@@ -58,7 +54,7 @@ class matchInfoController extends Controller
 
     var_dump($match_string);
 */
-    return view('frontend.match_info');
+    return view('frontend.match_info')->with('match_dump', $match_dump);
 
 
 

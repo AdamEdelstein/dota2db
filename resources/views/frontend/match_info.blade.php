@@ -48,8 +48,64 @@
                 </div>
               {!! Form::close() !!}
             </div>
+
+            <div>
+
+            <p>
+          MatchID: <?php echo $match_dump['result']['duration']; ?><br>
+
+          Who Won?: <?php
+                      if ($match_dump['result']['radiant_win'] == 1) {
+                        echo 'Radiant Victory';
+                      } else {
+                        echo 'Dire Victory';
+                      }
+                      ?><br>
+
+          Start Time: <?php echo $match_dump['result']['start_time'] ?><br>
+          Server Cluster: <?php echo $match_dump['result']['cluster'] ?><br>
+          Game Mode: <?php
+                        $game_mode = $match_dump['result']['game_mode'];
+
+                        switch ($game_mode) {
+                        case "0":
+                            echo "Practice Mode";
+                            break;
+                        case "1":
+                            echo "Public Matchmaking";
+                            break;
+                        case "2":
+                            echo "Tournament";
+                            break;
+                        case "3":
+                            echo "Tutorial";
+                            break;
+                        case "4":
+                            echo "Co-op with bots";
+                            break;
+                        case "5":
+                            echo "Team Match";
+                            break;
+                        case "6":
+                            echo "Solo Queue";
+                            break;
+                        case "7":
+                            echo "Ranked";
+                            break;
+                        case "8":
+                            echo "Solo-Mid 1v1";
+                            break;
+                        default:
+                            echo "Your lobby type was not found";
+                      }
+                    ?><br>
+
+
+
+            </div>
+
         </div>
 
-        
+
     </body>
 </html>
