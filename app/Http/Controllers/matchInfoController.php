@@ -19,12 +19,52 @@ class matchInfoController extends Controller
 
     	//$matchid = new \stdClass;
 
-    $url = "https://api.steampowered.com/IDOTA2Match_570/GetMatchDetails/V001/?key=C8A57C84EF504540A356A22A523A8ADF&match_id=".$request->match_id;
-    $string = file_get_contents($url);
-    $json = json_decode($string);
-    var_dump($string);
+    $match_url = "https://api.steampowered.com/IDOTA2Match_570/GetMatchDetails/V001/?key=C8A57C84EF504540A356A22A523A8ADF&match_id=".$request->match_id;
 
-      return view('frontend.match_info');
+
+    //  Initiate curl
+    $ch = curl_init();
+    // Disable SSL verification
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    // Will return the response, if false it print the response
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    // Set the url
+    curl_setopt($ch, CURLOPT_URL,$match_url);
+    // Execute
+    $result=curl_exec($ch);
+    // Closing
+    curl_close($ch);
+
+
+
+    $match_dump = (json_decode($result, true));
+
+    echo '<p>MatchID : '.$match_dump['result']['match_id'].'</p>';
+    echo '<p>Who Won? (boolean) : '.$match_dump['result']['radiant_win'].'</p>';
+    echo '<p>Start Time : '.$match_dump['result']['start_time'].'</p>';
+    echo '<p>Server Cluster : '.$match_dump['result']['cluster'].'</p>';
+    echo '<p>Game Mode : '.$match_dump['result']['game_mode'].'</p>';
+
+
+
+
+
+
+  // var_dump(json_decode($result, true));
+
+/*
+    $match_string = file_get_contents($match_url);
+    $match_json = json_encode($match_string);
+
+    var_dump($match_string);
+*/
+    return view('frontend.match_info');
+
+
+
+
+    //$jason->duration; //$jason["duration"];
+
 
   }
 }
