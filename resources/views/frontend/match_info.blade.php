@@ -39,6 +39,7 @@
         <div class="container">
             <div class="content">
               <div class="title">Match Information</div>
+              {!! var_dump($match_dump['result']['players'][0]) !!}
               <div>Enter your MatchID Below:</div>
               <br>
               {!! Form::open(array('url' => '/match_info')); !!}
@@ -52,7 +53,11 @@
             <div>
 
             <p>
-          MatchID: <?php echo $match_dump['result']['duration']; ?><br>
+           <br>
+           <?php if (isset($match_dump)) { ?>
+
+          Match ID: {!! $match_dump['result']['match_id'] !!}<br>
+          Match Duration: {!! $match_dump['result']['duration'] !!}<br>
 
           Who Won?: <?php
                       if ($match_dump['result']['radiant_win'] == 1) {
@@ -62,8 +67,8 @@
                       }
                       ?><br>
 
-          Start Time: <?php echo $match_dump['result']['start_time'] ?><br>
-          Server Cluster: <?php echo $match_dump['result']['cluster'] ?><br>
+          Start Time: {!! $match_dump['result']['start_time'] !!}<br>
+          Server Cluster: {!! $match_dump['result']['cluster'] !!}<br>
           Game Mode: <?php
                         $game_mode = $match_dump['result']['game_mode'];
 
@@ -98,7 +103,12 @@
                         default:
                             echo "Your lobby type was not found";
                       }
-                    ?><br>
+
+          //echo $match_dump['result']['game_mode'] ?><br>
+
+
+
+          <?php } ?>
 
 
 
@@ -106,6 +116,8 @@
 
         </div>
 
+        <div>
+        </div>
 
     </body>
 </html>

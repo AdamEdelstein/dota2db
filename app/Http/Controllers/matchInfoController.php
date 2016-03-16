@@ -39,14 +39,7 @@ class matchInfoController extends Controller
 
     $match_dump = (json_decode($result, true));
 
-
-
-
-
-
-
-
-  // var_dump(json_decode($result, true));
+  //var_dump(json_decode($result, true));
 
 /*
     $match_string = file_get_contents($match_url);
@@ -55,7 +48,6 @@ class matchInfoController extends Controller
     var_dump($match_string);
 */
     return view('frontend.match_info')->with('match_dump', $match_dump);
-
 
 
 
