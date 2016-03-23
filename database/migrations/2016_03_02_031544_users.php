@@ -12,6 +12,7 @@ class Users extends Migration
      */
     public function up()
     {
+      /*
       Schema::create('users', function(Blueprint $users_table) {
         $users_table->increments('id');
         $users_table->string('personaname');
@@ -20,6 +21,7 @@ class Users extends Migration
         $users_table->string('profileurl');
         $users_table->tinyInteger('is_personaname_real');
       });
+      */
     }
 
     /**

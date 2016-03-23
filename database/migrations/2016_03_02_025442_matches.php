@@ -20,6 +20,10 @@ class Matches extends Migration
         $matches_table->tinyInteger('game_mode');
         $matches_table->smallInteger('cluster');
       });
+
+      Schema::table('matches', function ($matches_table) {
+        $matches_table->mediumInteger('match_id');
+      });
     }
 
     /**

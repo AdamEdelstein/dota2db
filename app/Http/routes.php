@@ -22,6 +22,7 @@ Route::get('match_info', 'matchInfoController@index')->name('showMatches');
 
 Route::post('match_info', 'matchInfoController@gotShowMatches')->name('gotmatch');
 
+Route::get('match_api', 'matchInfoController@matches_json')->name('mjson');
 
 
 /*

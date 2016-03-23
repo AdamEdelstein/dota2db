@@ -39,7 +39,6 @@
         <div class="container">
             <div class="content">
               <div class="title">Match Information</div>
-              {!! var_dump($match_dump['result']['players'][0]) !!}
               <div>Enter your MatchID Below:</div>
               <br>
               {!! Form::open(array('url' => '/match_info')); !!}
@@ -54,7 +53,11 @@
 
             <p>
            <br>
+
            <?php if (isset($match_dump)) { ?>
+
+          {!! var_dump($match_dump['result']['players'][0]) !!}
+
 
           Match ID: {!! $match_dump['result']['match_id'] !!}<br>
           Match Duration: {!! $match_dump['result']['duration'] !!}<br>
@@ -105,8 +108,6 @@
                       }
 
           //echo $match_dump['result']['game_mode'] ?><br>
-
-
 
           <?php } ?>
 

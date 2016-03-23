@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use DB;
+use App\matches;
 
 // $SteamKey = C8A57C84EF504540A356A22A523A8ADF;
 
@@ -41,18 +43,40 @@ class matchInfoController extends Controller
 
   //var_dump(json_decode($result, true));
 
-/*
-    $match_string = file_get_contents($match_url);
-    $match_json = json_encode($match_string);
+    $match = new matches;
+    $match->radiant_win = $match_dump['result']['radiant_win'];
+    $match->duration = $match_dump['result']['duration'];
+    $match->start_time = $match_dump['result']['start_time'];
+    $match->game_mode = $match_dump['result']['game_mode'];
+    $match->cluster = $match_dump['result']['cluster'];
+    $match->save();
 
-    var_dump($match_string);
+
+
+    /*
+    $match_table = DB::table('matches')->insert(
+         ['radiant_win' => $match_dump['result']['radiant_win'],
+          'duration' => $match_dump['result']['duration'],
+          'start_time' => $match_dump['result']['start_time'],
+          'game_mode' => $match_dump['result']['game_mode'],
+          'cluster' => $match_dump['result']['cluster'],
+         ]);
 */
+
+    var_dump($match_table);
+
     return view('frontend.match_info')->with('match_dump', $match_dump);
-
-
 
     //$jason->duration; //$jason["duration"];
 
 
+
+
   }
+
+  public function matches_json() {
+      $matches = matches::all();
+      return response()->json($matches);
+  }
+
 }
