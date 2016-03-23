@@ -46,9 +46,9 @@ class matchInfoController extends Controller
     $match = new matches;
     $match->radiant_win = $match_dump['result']['radiant_win'];
     $match->duration = $match_dump['result']['duration'];
-    $match->start_time = $match_dump['result']['start_time'];
     $match->game_mode = $match_dump['result']['game_mode'];
     $match->cluster = $match_dump['result']['cluster'];
+    $match->match_id = $request->match_id;
     $match->save();
 
 
@@ -61,9 +61,10 @@ class matchInfoController extends Controller
           'game_mode' => $match_dump['result']['game_mode'],
           'cluster' => $match_dump['result']['cluster'],
          ]);
+         var_dump($matches_table);
 */
 
-    var_dump($match_table);
+
 
     return view('frontend.match_info')->with('match_dump', $match_dump);
 

@@ -56,7 +56,7 @@
 
            <?php if (isset($match_dump)) { ?>
 
-          {!! var_dump($match_dump['result']['players'][0]) !!}
+          {!! var_dump($match_dump['result']) !!}
 
 
           Match ID: {!! $match_dump['result']['match_id'] !!}<br>

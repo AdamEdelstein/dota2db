@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Matches extends Migration
+class AddTimestamp extends Migration
 {
     /**
      * Run the migrations.
@@ -12,13 +12,8 @@ class Matches extends Migration
      */
     public function up()
     {
-      Schema::create('matches', function(Blueprint $matches_table) {
-
-      });
-
       Schema::table('matches', function ($matches_table) {
-        $matches_table->mediumInteger('match_id');
-        $match_table->timestamps();
+        $matches_table->integer('match_id');
       });
     }
 
