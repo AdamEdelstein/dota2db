@@ -48,7 +48,7 @@ class matchInfoController extends Controller
     $match->duration = $match_dump['result']['duration'];
     $match->game_mode = $match_dump['result']['game_mode'];
     $match->cluster = $match_dump['result']['cluster'];
-    $match->match_id = $request->match_id;
+    $match->match_id = $match_dump['result']['match_id'];
     $match->save();
 
 
