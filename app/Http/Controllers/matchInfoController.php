@@ -21,7 +21,7 @@ class matchInfoController extends Controller
 
     	//$matchid = new \stdClass;
 
-    $match_url = "https://api.steampowered.com/IDOTA2Match_570/GetMatchDetails/V001/?key=C8A57C84EF504540A356A22A523A8ADF&match_id=".$request->match_id;
+    $match_url = 'https://api.steampowered.com/IDOTA2Match_570/GetMatchDetails/V001/?key=C8A57C84EF504540A356A22A523A8ADF&match_id='.$request->match_id;
 
 
     //  Initiate curl
@@ -31,7 +31,7 @@ class matchInfoController extends Controller
     // Will return the response, if false it print the response
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     // Set the url
-    curl_setopt($ch, CURLOPT_URL,$match_url);
+    curl_setopt($ch, CURLOPT_URL, $match_url);
     // Execute
     $result=curl_exec($ch);
     // Closing
@@ -41,6 +41,7 @@ class matchInfoController extends Controller
 
     $match_dump = (json_decode($result, true));
 
+
   //var_dump(json_decode($result, true));
 
     $match = new matches;
@@ -48,21 +49,22 @@ class matchInfoController extends Controller
     $match->duration = $match_dump['result']['duration'];
     $match->game_mode = $match_dump['result']['game_mode'];
     $match->cluster = $match_dump['result']['cluster'];
-    $match->match_id = $match_dump['result']['match_id'];
+    $match->match_id = $request->match_id;
     $match->save();
 
 
 
-    /*
-    $match_table = DB::table('matches')->insert(
-         ['radiant_win' => $match_dump['result']['radiant_win'],
-          'duration' => $match_dump['result']['duration'],
-          'start_time' => $match_dump['result']['start_time'],
-          'game_mode' => $match_dump['result']['game_mode'],
-          'cluster' => $match_dump['result']['cluster'],
-         ]);
-         var_dump($matches_table);
-*/
+
+    // $match_table = DB::table('matches')->insert(
+    //      ['radiant_win' => $match_dump['result']['radiant_win'],
+    //       'duration' => $match_dump['result']['duration'],
+    //       'start_time' => $match_dump['result']['start_time'],
+    //       'game_mode' => $match_dump['result']['game_mode'],
+    //       'cluster' => $match_dump['result']['cluster'],
+    //       'match_id' => $match_dump['result']['cluster']
+    //      ]);
+    //      var_dump($matches_table);
+
 
 
 
