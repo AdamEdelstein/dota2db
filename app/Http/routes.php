@@ -24,6 +24,7 @@ Route::post('match_info', 'matchInfoController@gotShowMatches')->name('gotmatch'
 
 Route::get('match_api', 'matchInfoController@matches_json')->name('mjson');
 
+Route::get('teams', 'teamsController@teams')->name('teams');
 
 /*
 |--------------------------------------------------------------------------

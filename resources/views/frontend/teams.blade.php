@@ -33,18 +33,97 @@
             .title {
                 font-size: 96px;
             }
+
+            td {
+                padding: 15px;
+            }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="content">
-              <div class="title">Upper Bracket Teams</div>
-              <div>Team1  Team2  Team3 Team 4</div>
-              <div>Team5  Team6  Team7 Team 8</div>
+              <div class="title">Teams</div>
 
-              <div class="title">Lower Bracket Teams</div>
-              <div>Team1  Team2  Team3 Team 4</div>
-              <div>Team5  Team6  Team7 Team 8</div>
+
+              <table style="width:100%">
+                <tr>
+                  <td><h2>Evil Geniuses</h2>
+                      tag: {!! $eg_data['result']['teams'][0]['tag'] !!}<br>
+                      country: {!! $eg_data['result']['teams'][0]['country_code'] !!}<br>
+                      web: {!! $eg_data['result']['teams'][0]['url'] !!}<br>
+                      <br>
+                      Roster
+                      <br>
+                      {!! $eg_data['result']['teams'][0]['player_0_account_id'] !!}<br>
+                      {!! $eg_data['result']['teams'][0]['player_1_account_id'] !!}<br>
+                      {!! $eg_data['result']['teams'][0]['player_2_account_id'] !!}<br>
+                      {!! $eg_data['result']['teams'][0]['player_3_account_id'] !!}<br>
+                      {!! $eg_data['result']['teams'][0]['player_4_account_id'] !!}<br>
+                  </td>
+
+                  <td><h2>OG Dota2</h2>
+                    tag: {!! $og_data['result']['teams'][0]['tag'] !!}<br>
+                    country: {!! $og_data['result']['teams'][0]['country_code'] !!}<br>
+                    web: {!! $og_data['result']['teams'][0]['url'] !!}<br>
+                    <br>
+                    Roster
+                    <br>
+                    {!! $og_data['result']['teams'][0]['player_0_account_id'] !!}<br>
+                    {!! $og_data['result']['teams'][0]['player_1_account_id'] !!}<br>
+                    {!! $og_data['result']['teams'][0]['player_2_account_id'] !!}<br>
+                    {!! $og_data['result']['teams'][0]['player_3_account_id'] !!}<br>
+                    {!! $og_data['result']['teams'][0]['player_4_account_id'] !!}<br>
+                  </td>
+
+                  <td><h2>Team Secret</h2>
+                    tag: {!! $secret_data['result']['teams'][0]['tag'] !!}<br>
+                    country: {!! $secret_data['result']['teams'][0]['country_code'] !!}<br>
+                    web: {!! $secret_data['result']['teams'][0]['url'] !!}<br>
+                    <br>
+                    Roster
+                    <br>
+                    {!! $secret_data['result']['teams'][0]['player_0_account_id'] !!}<br>
+                    {!! $secret_data['result']['teams'][0]['player_1_account_id'] !!}<br>
+                    {!! $secret_data['result']['teams'][0]['player_2_account_id'] !!}<br>
+                    {!! $secret_data['result']['teams'][0]['player_3_account_id'] !!}<br>
+                    Unknown
+                  </td>
+
+                  <td><h2>MVP Phoenix</h2>
+                    tag: {!! $mvp_data['result']['teams'][0]['tag'] !!}<br>
+                    country: {!! $mvp_data['result']['teams'][0]['country_code'] !!}<br>
+                    web: {!! $mvp_data['result']['teams'][0]['url'] !!}<br>
+                    <br>
+                    Roster
+                    <br>
+                    {!! $mvp_data['result']['teams'][0]['player_0_account_id'] !!}<br>
+                    {!! $mvp_data['result']['teams'][0]['player_1_account_id'] !!}<br>
+                    {!! $mvp_data['result']['teams'][0]['player_2_account_id'] !!}<br>
+                    {!! $mvp_data['result']['teams'][0]['player_3_account_id'] !!}<br>
+                    {!! $mvp_data['result']['teams'][0]['player_4_account_id'] !!}<br>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>CDEC Gaming
+
+                  </td>
+                  <td>Vici Gaming</td>
+                  <td>Alliance</td>
+                  <td>Virtus Pro</td>
+                </tr>
+                <tr>
+                  <td>Team Liquid</td>
+                  <td>Team Spirit</td>
+                  <td>Team Archon</td>
+                  <td>Fnatic</td>
+                </tr>
+                <tr>
+                  <td>MVP Phoenix</td>
+                  <td>Newbee</td>
+                  <td>LGD Gaming</td>
+                  <td>Complexity</td>
+              </table>
 
             </div>
         </div>
