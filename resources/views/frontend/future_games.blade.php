@@ -42,13 +42,37 @@
     <body>
         <div class="container">
             <div class="content">
-              <div class="title">Upoming Games</div>
+              <div class="title">Upcoming Games</div>
 
 
             <!-- {{!! var_dump($games) !!}} -->
-            {{!! var_dump($games['matches'][0]['league']['name']) !!}}
-            {{!! var_dump($games['matches'][1]['league']['name']) !!}}
-            {{!! var_dump($games['matches'][2]['league']['name']) !!}}
+            {!! $games['matches'][0]['league']['name'] !!}<br>
+            Best out of {!! $games['matches'][0]['series_type'] !!}<br>
+            <img src="<?php echo 'http://dailydota2.com'.$games['matches'][0]['league']['image_url']?>" width="100px", height="auto">
+            <hr>
 
+            {!! $games['matches'][1]['league']['name'] !!}<br>
+            Best out of {!! $games['matches'][1]['series_type'] !!}<br>
+            <img src="<?php echo 'http://dailydota2.com'.$games['matches'][1]['league']['image_url']?>" width="100px", height="auto">
+            <hr>
+
+            {!! $games['matches'][2]['league']['name'] !!}<br>
+            Best out of {!! $games['matches'][1]['series_type'] !!}<br>
+            <img src="<?php echo 'http://dailydota2.com'.$games['matches'][2]['league']['image_url']?>" width="100px", height="auto">
+            <hr>
+
+            {!! $games['matches'][3]['league']['name'] !!}<br>
+            Best out of {!! $games['matches'][3]['series_type'] !!}<br>
+            <img src="<?php echo 'http://dailydota2.com'.$games['matches'][3]['league']['image_url']?>" width="100px", height="auto">
+            <hr>
+
+            {!! $games['matches'][4]['league']['name'] !!}<br>
+            Best out of {!! $games['matches'][4]['series_type'] !!}<br>
+            <img src="<?php echo 'http://dailydota2.com'.$games['matches'][4]['league']['image_url']?>" width="100px", height="auto">
+            <hr>
+
+            {!! $games['matches'][5]['league']['name'] !!}<br>
+            Best out of {!! $games['matches'][5]['series_type'] !!}<br>
+            <img src="<?php echo 'http://dailydota2.com'.$games['matches'][5]['league']['image_url']?>" width="100px", height="auto">
     </body>
 </html>

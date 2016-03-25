@@ -85,7 +85,7 @@
                     {!! $secret_data['result']['teams'][0]['player_0_account_id'] !!}<br>
                     {!! $secret_data['result']['teams'][0]['player_1_account_id'] !!}<br>
                     {!! $secret_data['result']['teams'][0]['player_2_account_id'] !!}<br>
-                    {!! $secret_data['result']['teams'][0]['player_3_account_id'] !!}<br>
+                    Unknown<br>
                     Unknown
                   </td>
 
