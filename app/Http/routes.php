@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('teams', 'teamsController@index')->name('showTeams');
+
 
 Route::get('match_info', 'matchInfoController@index')->name('showMatches');
 
@@ -25,6 +25,10 @@ Route::post('match_info', 'matchInfoController@gotShowMatches')->name('gotmatch'
 Route::get('match_api', 'matchInfoController@matches_json')->name('mjson');
 
 Route::get('teams', 'teamsController@teams')->name('teams');
+
+Route::get('future_games', 'futuregamesController@index')->name('upcomingGames');
+
+Route::get('future_games', 'futuregamesController@upcomingGames')->name('upcomingGames');
 
 /*
 |--------------------------------------------------------------------------

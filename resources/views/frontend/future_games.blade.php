@@ -33,16 +33,22 @@
             .title {
                 font-size: 96px;
             }
+
+            td {
+                padding: 15px;
+            }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Dota2 Database</div>
-                <div>by: Adam Edelstein</div>
+              <div class="title">Upoming Games</div>
 
 
-            </div>
-        </div>
+            <!-- {{!! var_dump($games) !!}} -->
+            {{!! var_dump($games['matches'][0]['league']['name']) !!}}
+            {{!! var_dump($games['matches'][1]['league']['name']) !!}}
+            {{!! var_dump($games['matches'][2]['league']['name']) !!}}
+
     </body>
 </html>

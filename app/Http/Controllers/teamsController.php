@@ -69,22 +69,22 @@ class teamsController extends Controller
     $secret_data = (json_decode($result2, true));
 
 
-    //MVP-Phoenix (ID: 1148284)
-    $mvp_data_web = 'https://api.steampowered.com/IDOTA2Match_570/GetTeamInfoByTeamID/v001/?key=C8A57C84EF504540A356A22A523A8ADF&start_at_team_id=1148284&teams_requested=1';
+  //MVP-Phoenix (ID: 1148284)
+  $mvp_data_web = 'https://api.steampowered.com/IDOTA2Match_570/GetTeamInfoByTeamID/v001/?key=C8A57C84EF504540A356A22A523A8ADF&start_at_team_id=1148284&teams_requested=1';
 
-        $ch3 = curl_init();
-        // Disable SSL verification
-        curl_setopt($ch3, CURLOPT_SSL_VERIFYPEER, false);
-        // Will return the response, if false it print the response
-        curl_setopt($ch3, CURLOPT_RETURNTRANSFER, true);
-        // Set the url
-        curl_setopt($ch3, CURLOPT_URL, $mvp_data_web);
-        // Execute
-        $result3=curl_exec($ch3);
-        // Closing
-        curl_close($ch3);
+      $ch3 = curl_init();
+      // Disable SSL verification
+      curl_setopt($ch3, CURLOPT_SSL_VERIFYPEER, false);
+      // Will return the response, if false it print the response
+      curl_setopt($ch3, CURLOPT_RETURNTRANSFER, true);
+      // Set the url
+      curl_setopt($ch3, CURLOPT_URL, $mvp_data_web);
+      // Execute
+      $result3=curl_exec($ch3);
+      // Closing
+      curl_close($ch3);
 
-    $mvp_data = (json_decode($result3, true));
+  $mvp_data = (json_decode($result3, true));
 
 
 
