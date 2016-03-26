@@ -29,8 +29,8 @@
   position: relative;
   margin-bottom: 20px;
   padding-bottom: 30px;
-  background: #fefff9;
-  color: #363636;
+  background: #666666;
+  color: white;
   text-decoration: none;
   -moz-box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
   -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
@@ -85,7 +85,7 @@
   background-color: rgba(255, 255, 255, 0);
 }
 .card .card-title {
-  background: rgba(157, 187, 63, 0.85);
+  background: #870202;
   padding: 3.5% 0 2.5% 0;
   color: white;
   font-family: 'Roboto Condensed', sans-serif;
@@ -95,7 +95,7 @@
   width: 100%;
 }
 .card .card-title h3 {
-  font-size: 1.2em;
+  font-size: 1em;
   line-height: 1.2;
   padding: 0 3.5%;
   margin: 0;
@@ -123,13 +123,13 @@
   transition-timing-function: ease-in-out;
 }
 .card:hover, .card:focus {
-  background: white;
+  background: #333333;
   -moz-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
 }
 .card:hover .card-title, .card:focus .card-title {
-  background: rgba(157, 187, 63, 0.95);
+  background: #490303;
 }
 .card:hover .card-meta, .card:focus .card-meta {
   max-height: 1em;
@@ -140,7 +140,7 @@ img {
 }
 
 body {
-  background: #f0f0f0;
+  background: #131614;
   font-size: 17px;
   line-height: 1.4;
   font-family: 'Jaldi', sans-serif;
